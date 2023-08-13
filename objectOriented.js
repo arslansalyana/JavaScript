@@ -145,3 +145,23 @@ console.log(obj.num);
 
 // This behavior is in contrast to primitive values (such as numbers or strings), 
 //    where changes made to a copy of the value inside a function do not affect the original value outside the function.
+
+//Adding & removing the properties in javascript
+function displayResult(semester, creditHours){
+   this.semester = semester;
+   this.creditHours = creditHours;
+   this.cgpa = function (){
+      console.log(`The CGPA of the student is ${creditHours/semester}`);
+   }
+}
+const student = new displayResult(4, 15);
+student.semesterFee = 147000;
+// console.log(student.semester);
+// console.log(student.creditHours);
+console.log(student.semesterFee);
+delete student.semesterFee;
+// student.cgpa();
+// student["no_of_labs"] = 4;
+// delete student.no_of_labs;
+// console.log(student.no_of_labs);
+console.log(student);
