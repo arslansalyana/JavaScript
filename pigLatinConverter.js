@@ -1,3 +1,5 @@
+// Below there are two methods to convert the sentence into Pig LATIN, first approach used the FOR loop, and the 2nd approach utilizes
+// the map function in ES6.
 // const sentence = prompt("Enter the Sentence!");
 // function pigLatinConverter (sentence){
 //    const arr = sentence.split(' ');
@@ -13,19 +15,17 @@
 // }
 // pigLatinConverter(sentence);
 
-const sentence = prompt("Enter the Sentence!");
 
+//The more better and concise way
+const sentence = prompt("Enter the Sentence!");
 function pigLatinConverter (sentence){
    const arr = sentence.split(' ');
-
    const pigLatinArray = arr.map((singleWord) => {
       const char1 = singleWord[0];
       const restOfTheChars = singleWord.slice(1,singleWord.length);
       return restOfTheChars + char1 + "ay";
    })
-   
    const pigLatinSentence = pigLatinArray.join(" ");
    console.log(pigLatinSentence);
 }
-
 pigLatinConverter(sentence);
