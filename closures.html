@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures in JavaScript</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      button {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Closures in JavaScript</h1>
+    <button id="orange">Orange Buttton</button>
+    <button id="green">Green Button</button>
+
+    <script>
+      function clickHandler(color) {
+        return function () {
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
+      document.getElementById("orange").onclick = clickHandler(`orange`);
+      document.getElementById("green").onclick = clickHandler(`green`);
+    </script>
+  </body>
+</html>
+
+
+<!-- function clickHandler(color) {
+    function changeColor() {
+      document.body.style.backgroundColor = `${color}`;
+    };
+} -->
