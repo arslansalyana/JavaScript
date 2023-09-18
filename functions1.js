@@ -53,11 +53,28 @@ updateObject(profile);
 const greeting = function (name){
     return `Hello ${name}`
 }
-console.log(greeting("Arslan"));
+// console.log(greeting("Arslan"));
 
 //they may have name as well:
 let factorial = function fact(n){
     return n < 2 ? 1 : n * fact (n-1);
 }
-console.log(factorial(4));
+// console.log(factorial(4));
+
+
+// a function can be defined based on the condition
+let num = 0;
+let aFunction;
+if (num===0){
+    aFunction = function (){
+        console.log('Hello Arslan based on the condition!')
+    }
+    aFunction();
+}
+else{
+    console.log("Condition failed!")
+}
+
+
+
 
