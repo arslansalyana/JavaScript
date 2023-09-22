@@ -19,3 +19,44 @@ console.log(myPet());
 //  function immediately and want to store its reference for later use, you should use the
 //   second approach: return getName;. This way, you can call the function only when you 
 //   need its result, minimizing the number of function invocations.
+
+
+// Another example
+// An object containing methods for manipulating the inner variables of the outer function can be returned.
+
+function createPet(name) {
+    let sex;
+
+    const pet = {
+        setName(newName){
+            name = newName;
+        },
+        getName(){
+            return name;
+        },
+        getSex(){
+            return sex;
+        },
+        setSex(newSex) {
+            if (
+              typeof newSex === "string" &&
+              (newSex.toLowerCase() === "male" || newSex.toLowerCase() === "female")
+            ) {
+              sex = newSex;
+            }
+        },
+
+    };
+    return pet;
+}
+
+console.log(`THE START OF 2ND FUNCTION`);
+
+const myPet1 = createPet("Bashu");
+console.log(myPet1.getName());
+
+myPet1.setName("myChotaBashu");
+console.log(myPet1.getName());
+
+myPet1.setSex("female");
+console.log(myPet1.getSex());
