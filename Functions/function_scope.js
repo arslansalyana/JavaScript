@@ -73,3 +73,22 @@ function fun1(){
 //this example illustrates that, any nested function can access all the varibales defied above it, like its
 // parent function variables and then parents of those and so on.
 // console.log(fun1());
+
+
+// Recursion itself uses a stack: Function stack
+function foo(num){
+    if (num < 0){
+        return;
+    }
+    console.log(`Begin: ${num}`);
+    foo(num-1);
+    console.log(`End: ${num}`);
+}
+// https://www.jsv9000.app/?code=ZnVuY3Rpb24gZm9vKG51bSl7DQogICAgaWYgKG51bSA8IDApew0KICAgI
+// CAgICByZXR1cm47DQogICAgfQ0KICAgIGNvbnNvbGUubG9nKGBCZWdpbjogJHtudW19YCk7DQogICAgZm9vKG51b
+// S0xKTsNCiAgICBjb25zb2xlLmxvZyhgRW5kOiAke251bX1gKTsNCn0NCmZvbygzKTs%3D
+
+// This function uses a recursive call that in fact makes use of the call stack, the function stack
+// In the call stack , the functions are pushed into it and gets executed one by one, once a function
+// is executed , it is popped off of the stack.
+// foo(3);
