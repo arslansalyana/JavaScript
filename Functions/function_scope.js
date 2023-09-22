@@ -92,3 +92,19 @@ function foo(num){
 // In the call stack , the functions are pushed into it and gets executed one by one, once a function
 // is executed , it is popped off of the stack.
 // foo(3);
+
+
+//Name conflicts in scope
+// for example
+
+function baharWala(){
+    let x = 5;
+    function andarWala(x){
+        return x * 2;
+    }
+    return andarWala;
+}
+console.log(baharWala()(10));
+// instead of 10 , it outputs 20, because the value passed to the andarWala function takes precedence.
+// More nested scopes take precedence. So, the innermost scope takes the highest precedence,
+// while the outermost scope takes the lowest. This is the scope chain.
