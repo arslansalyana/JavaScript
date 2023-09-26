@@ -1,7 +1,6 @@
 //Arrays: In JavaScript, arrays aren't primitives but are instead Array objects.
 // Arrays are resizeable, mix of different data types.
-// Arrays are zero-indexed. First element is at index 0, array[0];
-//last element of the array, (array.length-1)
+// Arrays are zero-indexed. First element is at index 0, array[0] & last element of the array, (array.length-1)
 
 
 //Very Imp: JavaScript array-copy operations create shallow copies. 
